@@ -1,0 +1,66 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: 'DM Sans', system-ui, sans-serif;
+  --font-display: 'Space Grotesk', system-ui, sans-serif;
+  --color-teal-50: #f0fdfa;
+  --color-teal-100: #ccfbef;
+  --color-teal-200: #99f6e0;
+  --color-teal-300: #5eead0;
+  --color-teal-400: #2dd4bd;
+  --color-teal-500: #14b8a6;
+  --color-teal-600: #0d9488;
+  --color-teal-700: #0f766e;
+  --color-teal-800: #115e59;
+  --color-teal-900: #134e4a;
+}
+
+body {
+  margin: 0;
+  min-width: 320px;
+  min-height: 100vh;
+  background-color: #f4f8f7;
+  color: #10272b;
+  font-family: 'DM Sans', system-ui, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+input[type="range"] {
+  -webkit-appearance: none;
+  appearance: none;
+  height: 6px;
+  border-radius: 6px;
+  background: linear-gradient(90deg, #14b8a6 0%, #14b8a6 50%, #d9e9e7 50%, #d9e9e7 100%);
+  outline: none;
+}
+input[type="range"]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 22px;
+  height: 22px;
+  border: 4px solid white;
+  border-radius: 50%;
+  background: #16b8ad;
+  box-shadow: 0 1px 7px rgba(18, 155, 146, 0.4);
+  cursor: pointer;
+}
+input[type="range"]::-moz-range-thumb {
+  width: 18px;
+  height: 18px;
+  border: 3px solid white;
+  border-radius: 50%;
+  background: #16b8ad;
+  box-shadow: 0 1px 7px rgba(18, 155, 146, 0.4);
+  cursor: pointer;
+}
+
+@media print {
+  .no-print { display: none !important; }
+  body { background: white !important; }
+  .app-shell { max-width: 100% !important; padding: 0 !important; }
+  .print-band { display: block !important; }
+  .print-band table { min-width: 0 !important; }
+  .print-band th, .print-band td { border: 1px solid #ccc; padding: 5px; font-size: 9px; }
+}
